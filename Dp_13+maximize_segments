@@ -1,0 +1,26 @@
+def ab():
+    b=int(input())
+    c=list(map(int,input().split()))
+    c=sorted(c)
+    x=c[0]
+    y=c[1]
+    z=c[2]
+    k=[-1]*(b+1)
+    k[0]=0
+    t=b+1
+    for i in range(0,t):
+        if(k[i]!=-1):
+            if(i+x<t):
+            
+                k[i+x]=max(k[i+x],k[i]+1)
+            if(i+y<t):
+                k[i+y]=max(k[i+y],k[i]+1)
+            if(i+z<t):
+                k[i+z]=max(k[i+z],k[i]+1)
+    print(k[-1])
+
+
+
+
+for i in range(0,int(input())):
+    ab()
